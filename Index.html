@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Au cœur de la Kasper Trading Académie - Axi Insights</title>
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --axi-navy: #0A192F;
+            --axi-blue: #172A45;
+            --axi-gold: #e5b842;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-light: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* --- LAYOUT : MAIN COLUMN + SIDEBAR --- */
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* --- MAIN ARTICLE COLUMN --- */
+        .article-main {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .meta-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--axi-gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--axi-navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--axi-blue);
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        /* --- LOW COGNITIVE TIMELINE (STEPS) --- */
+        .step-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-body);
+            margin-bottom: 12px;
+            padding: 16px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--axi-blue);
+        }
+
+        .step-number {
+            font-weight: 800;
+            color: var(--axi-navy);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+
+        .step-text {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* --- SMALL VISUAL PLACEHOLDERS --- */
+        .small-visual {
+            background-color: var(--bg-body);
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* --- SIDEBAR (ABOUT KASPER) --- */
+        .sidebar {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 40px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.3rem;
+            color: var(--axi-navy);
+            margin-bottom: 15px;
+        }
+
+        .sidebar h4 {
+            font-size: 1.1rem;
+            color: var(--axi-navy);
+            margin: 25px 0 10px 0;
+        }
+
+        .sidebar p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .trustpilot {
+            display: inline-block;
+            background-color: #00b67a;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 3px solid var(--axi-gold);
+            padding-left: 15px;
+            margin: 20px 0;
+            color: var(--axi-navy);
+            font-weight: 600;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 950px) {
+            .page-container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- COLONNE PRINCIPALE : L'ARTICLE -->
+        <main class="article-main">
+            
+            <div class="small-visual">
+                [ INSÉRER BANNIÈRE PRINCIPALE 16:9 ICI - Logo Axi & KTA ]
+            </div>
+
+            <div class="meta-tag">Axi Partner Spotlight</div>
+            <h1>Au cœur de la Kasper Trading Académie : Le parcours utilisateur décrypté</h1>
+            
+            <p class="intro-text">
+                Chez Axi, nous observons que le succès d'un trader dépend de sa structure. La Kasper Trading Académie (KTA) s'est imposée en francophonie grâce à un parcours d'accompagnement millimétré. Que tu cherches une exécution rapide des marchés ou une autonomie totale, voici la chronologie exacte de ton intégration.
+            </p>
+
+            <!-- PHASE 1 -->
+            <h2>Phase 1 : L'Accès Public et la Configuration</h2>
+            <ul class="step-list">
+                <li class="step-item">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Télécharge l'application Telegram si nécessaire.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Clique sur le lien d'accès fourni.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Rejoins le groupe public instantanément.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Contacte le support dédié KTA pour entamer l'intégration.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">5</span>
+                    <span class="step-text">Ouvre ton compte de trading sécurisé chez le broker Axi.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">6</span>
+                    <span class="step-text">Effectue ton premier dépôt (entièrement retirable à tout moment).</span>
+                </li>
+            </ul>
+
+            <div class="small-visual">
+                [ INSÉRER PETITE ILLUSTRATION ICI : Mockup d'ouverture de compte Axi / Telegram ]
+            </div>
+
+            <!-- PHASE 2 -->
+            <h2>Phase 2 : L'Accueil Humain et l'Immersion</h2>
+            <ul class="step-list">
+                <li class="step-item">
+                    <span class="step-number">7</span>
+                    <span class="step-text">Réserve ton appel gratuit de 15 minutes sur WhatsApp.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">8</span>
+                    <span class="step-text">Échange de vive voix avec ton référent sur tes objectifs de trading.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">9</span>
+                    <span class="step-text">Découvre l'accès gratuit à l’académie (canal éducatif, lives, trades partagés).</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">10</span>
+                    <span class="step-text">Intègre la communauté privée Kasper Trading Académie.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">11</span>
+                    <span class="step-text">Suis les sessions live quotidiennes et les analyses de marché hebdomadaires.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">12</span>
+                    <span class="step-text">Ouvre tes premières positions (Buy & Sell) sur ton compte de trading.</span>
+                </li>
+            </ul>
+
+            <div class="small-visual">
+                [ INSÉRER PETITE ILLUSTRATION ICI : Aperçu d'une session Live Trading KTA ]
+            </div>
+
+            <!-- PHASE 3 -->
+            <h2>Phase 3 : L'Élite et l'Autonomie (Le Circle)</h2>
+            <ul class="step-list">
+                <li class="step-item">
+                    <span class="step-number">13</span>
+                    <span class="step-text">Sollicite ton référent pour passer à l'étape supérieure.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">14</span>
+                    <span class="step-text">Accède au Circle, ton espace de formation et communautaire haut de gamme.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">15</span>
+                    <span class="step-text">Suis la formation professionnelle en ligne (SMC et trading fondamental).</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">16</span>
+                    <span class="step-text">Maîtrise la psychologie du trader grâce au module Mindset.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">17</span>
+                    <span class="step-text">Débute ton coaching 1-1 en direct avec un expert-coach rentable.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">18</span>
+                    <span class="step-text">Passe l’évaluation finale pour valider tes connaissances.</span>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">19</span>
+                    <span class="step-text">Obtiens ton Certificat de Trader SMC officiel.</span>
+                </li>
+            </ul>
+
+            <div class="small-visual">
+                [ INSÉRER PETITE ILLUSTRATION ICI : Aperçu de l'espace Circle et du Certificat ]
+            </div>
+
+        </main>
+
+        <!-- COLONNE LATÉRALE : ABOUT KASPER -->
+        <aside class="sidebar">
+            <div class="small-visual" style="margin-top: 0;">
+                [ INSÉRER PHOTO DE KASPER ICI ]
+            </div>
+            
+            <h3>Qui est Kasper ?</h3>
+            <span class="trustpilot">★ 4.5/5 sur Trustpilot</span>
+            
+            <p>
+                Kasper est un trader indépendant professionnel vivant de ses performances avec plus de 6 ans d'expérience sur les marchés. Il n'a pas créé une simple communauté, mais un réseau mondial composé de plusieurs dizaines de milliers de traders francophones avec qui il partage sa méthode, ses analyses ainsi que ses prises de positions.
+            </p>
+            <p>
+                La KTA est plus qu'un groupe, c'est une académie t'enseignant indépendance et performance sur les marchés. Vous trouverez d'ailleurs à chaque fin de mois un rapport détaillé des pertes et des gains complètement transparent.
+            </p>
+            
+            <div class="quote">
+                "Les hommes mentent, pas les chiffres."
+            </div>
+
+            <h4>Pourquoi Je Fais Ça ?</h4>
+            <p>
+                Parce que j’en avais marre de voir des gens se faire avoir. Je voyais partout des formations vides sans aucune valeur, des "experts" qui n’avaient jamais vraiment tradé, des vendeurs de rêve qui te parlent de liberté financière sans aucune maîtrise.
+            </p>
+            <p>
+                Des vidéos YouTube recyclées, des signaux bidons, aucune méthode, aucune structure, zéro résultat. Tout était pensé pour te faire acheter encore et encore, sans jamais te rendre autonome.
+            </p>
+            <p>
+                <strong>J’ai créé KasperTrading pour changer ça.</strong>
+            </p>
+            <p>
+                Parce que si, à mes débuts, j’avais eu accès à une vraie méthode structurée, si quelqu’un m’avait simplement montré quoi faire, clairement, dans le bon ordre... je me serais évité des années de galère.
+            </p>
+            <p>
+                Kasper, c’est une méthode, un cadre, une vraie structure. Mais surtout, c’est un environnement où tu apprends à exécuter, pas à rêver.
+            </p>
+            <p>
+                Je ne te promets pas la liberté. Je te montre comment aller la chercher et je t’aide à la construire.
+            </p>
+        </aside>
+
+    </div>
+
+</body>
+</html>
