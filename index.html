@@ -1,3 +1,10 @@
+L'erreur de ciblage sur le format est claire. On abandonne la roadmap brute pour revenir à un véritable article de fond (style institutionnel Axi), avec du contenu éditorial aéré par des listes à puces pour réduire la charge cognitive.
+
+J'ai intégré la section de ta capture d'écran de manière drastique, avec une esthétique sombre pour trancher avec le fond blanc de l'article et reproduire le rendu visuel. Juste en dessous, les 19 étapes ont été condensées en un parcours clair intitulé "Les 10 niveaux d'évolution d'un trader de la KTA". La sidebar de Kasper reste intacte sur le côté.
+
+Voici le code final, prêt à être copié-collé dans ton fichier `index.html`.
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +22,9 @@
             --bg-body: #f8fafc;
             --bg-card: #ffffff;
             --border-light: #e2e8f0;
+            --kta-dark: #0f1210;
+            --kta-green: #2ecc71;
+            --kta-card-bg: #131714;
         }
 
         * {
@@ -33,7 +43,7 @@
 
         /* --- LAYOUT : MAIN COLUMN + SIDEBAR --- */
         .page-container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 380px;
@@ -65,12 +75,6 @@
             margin-bottom: 20px;
         }
 
-        .intro-text {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-        }
-
         h2 {
             font-size: 1.5rem;
             color: var(--axi-blue);
@@ -79,46 +83,135 @@
             border-bottom: 2px solid var(--border-light);
         }
 
-        /* --- LOW COGNITIVE TIMELINE (STEPS) --- */
-        .step-list {
-            list-style: none;
-            margin-bottom: 30px;
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            text-align: justify;
         }
 
-        .step-item {
-            display: flex;
-            align-items: center;
-            background-color: var(--bg-body);
-            margin-bottom: 12px;
-            padding: 16px 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--axi-blue);
-        }
-
-        .step-number {
-            font-weight: 800;
+        /* --- BULLET POINTS DANS LE TEXTE --- */
+        .content-bullets {
+            margin: 10px 0 25px 20px;
+            list-style-type: square;
             color: var(--axi-navy);
-            margin-right: 15px;
-            font-size: 1.2rem;
-            min-width: 25px;
         }
 
-        .step-text {
-            font-size: 1rem;
-            font-weight: 500;
+        .content-bullets li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
         }
 
-        /* --- SMALL VISUAL PLACEHOLDERS --- */
-        .small-visual {
+        .content-bullets li strong {
+            color: var(--axi-blue);
+        }
+
+        /* --- VISUAL PLACEHOLDERS --- */
+        .visual-placeholder {
             background-color: var(--bg-body);
             border: 2px dashed #cbd5e1;
             border-radius: 8px;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
-            margin: 20px 0;
-            font-size: 0.85rem;
+            margin: 25px 0;
+            font-size: 0.9rem;
             color: var(--text-muted);
             font-weight: 600;
+        }
+
+        /* --- SECTION KTA 5 CARDS (SCREENSHOT MATCH) --- */
+        .kta-section {
+            background-color: var(--kta-dark);
+            border-radius: 12px;
+            padding: 40px 20px;
+            margin: 40px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .kta-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: white;
+            border: none;
+            padding: 0;
+        }
+
+        .kta-green-text {
+            color: var(--kta-green);
+        }
+
+        .kta-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .kta-card {
+            background-color: var(--kta-card-bg);
+            border: 1px solid #2a302c;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .kta-card-img-placeholder {
+            height: 120px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: #666;
+            border-bottom: 1px solid #2a302c;
+        }
+
+        .kta-card-content {
+            padding: 15px 10px;
+        }
+
+        .kta-card-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .kta-card-desc {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        /* --- LES 10 NIVEAUX D'EVOLUTION --- */
+        .evolution-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .evolution-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: var(--bg-body);
+            border-radius: 6px;
+            border-left: 3px solid var(--axi-blue);
+        }
+
+        .evo-number {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--axi-navy);
+            min-width: 35px;
+        }
+
+        .evo-text {
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         /* --- SIDEBAR (ABOUT KASPER) --- */
@@ -171,6 +264,11 @@
         }
 
         /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .kta-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
         @media (max-width: 950px) {
             .page-container {
                 grid-template-columns: 1fr;
@@ -180,134 +278,162 @@
                 top: 0;
             }
         }
+        @media (max-width: 600px) {
+            .kta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="page-container">
         
-        <!-- COLONNE PRINCIPALE : L'ARTICLE -->
         <main class="article-main">
             
-            <div class="small-visual">
-                [ INSÉRER BANNIÈRE PRINCIPALE 16:9 ICI - Logo Axi & KTA ]
+            <div class="visual-placeholder">
+                [ INSÉRER LA BANNIÈRE 16:9 ICI - Fond bleu marine, Logo Axi & KTA, texte "Axi Partner Spotlight" ]
             </div>
 
             <div class="meta-tag">Axi Partner Spotlight</div>
-            <h1>Au cœur de la Kasper Trading Académie : Le parcours utilisateur décrypté</h1>
+            <h1>Au cœur de la Kasper Trading Académie : L'un des plus grands groupes francophones redéfinit le parcours des traders</h1>
             
-            <p class="intro-text">
-                Chez Axi, nous observons que le succès d'un trader dépend de sa structure. La Kasper Trading Académie (KTA) s'est imposée en francophonie grâce à un parcours d'accompagnement millimétré. Que tu cherches une exécution rapide des marchés ou une autonomie totale, voici la chronologie exacte de ton intégration.
-            </p>
+            <p>Chez Axi, nous traitons quotidiennement les flux de milliers de traders à travers le monde. Nous observons ceux qui échouent rapidement, et ceux qui s'installent dans la durabilité. Très souvent, la différence ne réside pas dans le capital de départ, mais dans l'écosystème qui entoure le trader.</p>
 
-            <!-- PHASE 1 -->
-            <h2>Phase 1 : L'Accès Public et la Configuration</h2>
-            <ul class="step-list">
-                <li class="step-item">
-                    <span class="step-number">1</span>
-                    <span class="step-text">Télécharge l'application Telegram si nécessaire.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">2</span>
-                    <span class="step-text">Clique sur le lien d'accès fourni.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">3</span>
-                    <span class="step-text">Rejoins le groupe public instantanément.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">4</span>
-                    <span class="step-text">Contacte le support dédié KTA pour entamer l'intégration.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">5</span>
-                    <span class="step-text">Ouvre ton compte de trading sécurisé chez le broker Axi.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">6</span>
-                    <span class="step-text">Effectue ton premier dépôt (entièrement retirable à tout moment).</span>
-                </li>
+            <p>Aujourd'hui, nous mettons en lumière la Kasper Trading Académie (KTA). Avec des histoires de succès retentissantes parmi les clients ayant rejoint via Axi, la KTA s'est imposée comme l'un des piliers de la francophonie.</p>
+
+            <p>Leur force ? Un parcours client millimétré qui s'adapte à la psychologie de chaque individu. Voici exactement ce qui vous attend à l'intérieur de cette structure.</p>
+
+            <h2>Le premier contact : Un diagnostic humain avant tout</h2>
+
+            <p>La majorité des groupes en ligne vous lâchent dans un canal anonyme. KTA opte pour une approche radicalement différente. Dès l'instant où un membre franchit les portes de l'académie, il accède à un référent dédié sur WhatsApp.</p>
+
+            <p>Cet appel gratuit de 15 minutes est clinique. L'objectif de cet échange avec ton référent est multiple :</p>
+            <ul class="content-bullets">
+                <li><strong>Diagnostiquer :</strong> Parler de trading à cœur ouvert, évoquer tes ambitions et cibler tes blocages psychologiques.</li>
+                <li><strong>Sécuriser :</strong> T'expliquer la marche à suivre pour configurer ton environnement sécurisé chez Axi.</li>
+                <li><strong>Activer :</strong> T'accompagner pour effectuer ton premier dépôt (retirable à tout instant) et débloquer l'accès à l'écosystème.</li>
             </ul>
 
-            <div class="small-visual">
-                [ INSÉRER PETITE ILLUSTRATION ICI : Mockup d'ouverture de compte Axi / Telegram ]
+            <p>Que tu sois un trader débutant cherchant un cadre strict, ou un trader expérimenté voulant briser son plafond de verre, ce diagnostic pose les bases de ton évolution.</p>
+
+            <div class="visual-placeholder">
+                [ INSÉRER LE MONTAGE PROXIMITÉ HUMAINE ICI - Mockup WhatsApp & Accès Telegram sécurisé ]
             </div>
 
-            <!-- PHASE 2 -->
-            <h2>Phase 2 : L'Accueil Humain et l'Immersion</h2>
-            <ul class="step-list">
-                <li class="step-item">
-                    <span class="step-number">7</span>
-                    <span class="step-text">Réserve ton appel gratuit de 15 minutes sur WhatsApp.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">8</span>
-                    <span class="step-text">Échange de vive voix avec ton référent sur tes objectifs de trading.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">9</span>
-                    <span class="step-text">Découvre l'accès gratuit à l’académie (canal éducatif, lives, trades partagés).</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">10</span>
-                    <span class="step-text">Intègre la communauté privée Kasper Trading Académie.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">11</span>
-                    <span class="step-text">Suis les sessions live quotidiennes et les analyses de marché hebdomadaires.</span>
-                </li>
-                <li class="step-item">
-                    <span class="step-number">12</span>
-                    <span class="step-text">Ouvre tes premières positions (Buy & Sell) sur ton compte de trading.</span>
-                </li>
+            <h2>L'immersion : Une communauté soudée autour de l'exécution</h2>
+
+            <p>Une fois intégré au groupe privé, la théorie laisse place à la pratique. Le trading est une discipline isolante, mais la KTA a construit une communauté extrêmement soudée. Les membres ne sont jamais seuls face à leurs graphiques, grâce à un système d'accompagnement quotidien :</p>
+            
+            <ul class="content-bullets">
+                <li><strong>Sessions Live Quotidiennes :</strong> Analyse en direct le matin pour l'ouverture européenne, et l'après-midi pour la session américaine.</li>
+                <li><strong>Live Fondamental :</strong> Des sessions de coaching et d'analyse de marché chaque week-end.</li>
+                <li><strong>Signaux d'Experts :</strong> Réception des positions personnelles de Kasper ("Buy & Sell") pour comprendre quand et comment il entre sur le marché.</li>
             </ul>
 
-            <div class="small-visual">
-                [ INSÉRER PETITE ILLUSTRATION ICI : Aperçu d'une session Live Trading KTA ]
+            <p>Que tu sois un membre cherchant l'action immédiate en direct, ou un profil analytique observant le flux d'ordres pour devenir autonome, l'environnement Telegram répond au besoin urgent de structure.</p>
+
+            <div class="visual-placeholder">
+                [ INSÉRER LE TABLEAU DE BORD DE PREUVE ICI - Stats : 150k+ membres / 2.4M € de retraits ]
             </div>
 
-            <!-- PHASE 3 -->
-            <h2>Phase 3 : L'Élite et l'Autonomie (Le Circle)</h2>
-            <ul class="step-list">
-                <li class="step-item">
-                    <span class="step-number">13</span>
-                    <span class="step-text">Sollicite ton référent pour passer à l'étape supérieure.</span>
+            <div class="kta-section">
+                <h2 class="kta-title">Ton Chemin Avec Notre <span class="kta-green-text">Académie</span></h2>
+                
+                <div class="kta-grid">
+                    <div class="kta-card">
+                        <div class="kta-card-img-placeholder">[ IMAGE COACH 1V1 ]</div>
+                        <div class="kta-card-content">
+                            <div class="kta-card-title">Coaching 1v1 & Accompagnement Expert</div>
+                            <div class="kta-card-desc">60 jours de coaching avec un pro de l'équipe Kasper pour booster ta stratégie et progresser 5x plus vite.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="kta-card">
+                        <div class="kta-card-img-placeholder">[ IMAGE GRAPH TIRET/LIVE ]</div>
+                        <div class="kta-card-content">
+                            <div class="kta-card-title">Communauté Privée +<br>Live Coaching</div>
+                            <div class="kta-card-desc">Chaque dimanche : un live pour poser tes questions, apprendre, revoir les erreurs, comprendre les setups clés.</div>
+                        </div>
+                    </div>
+
+                    <div class="kta-card">
+                        <div class="kta-card-img-placeholder">[ IMAGE MODULE FISCALITÉ ]</div>
+                        <div class="kta-card-content">
+                            <div class="kta-card-title">La Fiscalité, L'astuce <span class="kta-green-text">Que</span> Personne Ne T'explique</div>
+                            <div class="kta-card-desc">On te donne accès à un module de fiscalité complet, pour comprendre où tu vas, quel statut choisir, et comment éviter les pièges.</div>
+                        </div>
+                    </div>
+
+                    <div class="kta-card">
+                        <div class="kta-card-img-placeholder">[ IMAGE GROUPE TÉLÉGRAM ]</div>
+                        <div class="kta-card-content">
+                            <div class="kta-card-title">Accès Au Groupe Privé <span class="kta-green-text">De</span> Signaux Exclusifs</div>
+                            <div class="kta-card-desc">Des setups Gold, BTC et Forex clairs, expliqués, basés sur ma propre stratégie, avec 95% de taux de réussite documenté.</div>
+                        </div>
+                    </div>
+
+                    <div class="kta-card">
+                        <div class="kta-card-img-placeholder">[ IMAGE 1,000,000$ ]</div>
+                        <div class="kta-card-content">
+                            <div class="kta-card-title">Accès À Du Capital Pour Trader</div>
+                            <div class="kta-card-desc">Nos membres accèdent à des opportunités de traders grâce à des comptes financés allant jusqu'à 1M$.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Les 10 niveaux d'évolution d'un trader de la KTA</h2>
+            
+            <p>La puissance de cet écosystème réside dans la clarté de sa progression. Le parcours utilisateur est pensé pour réduire la friction et maximiser l'apprentissage par étapes :</p>
+
+            <ul class="evolution-list">
+                <li class="evolution-item">
+                    <span class="evo-number">01</span>
+                    <span class="evo-text">Téléchargement de Telegram et accès instantané au groupe public.</span>
                 </li>
-                <li class="step-item">
-                    <span class="step-number">14</span>
-                    <span class="step-text">Accède au Circle, ton espace de formation et communautaire haut de gamme.</span>
+                <li class="evolution-item">
+                    <span class="evo-number">02</span>
+                    <span class="evo-text">Ouverture du compte sécurisé chez Axi et premier dépôt retirable.</span>
                 </li>
-                <li class="step-item">
-                    <span class="step-number">15</span>
-                    <span class="step-text">Suis la formation professionnelle en ligne (SMC et trading fondamental).</span>
+                <li class="evolution-item">
+                    <span class="evo-number">03</span>
+                    <span class="evo-text">Diagnostic sur-mesure via un appel gratuit avec un référent dédié.</span>
                 </li>
-                <li class="step-item">
-                    <span class="step-number">16</span>
-                    <span class="step-text">Maîtrise la psychologie du trader grâce au module Mindset.</span>
+                <li class="evolution-item">
+                    <span class="evo-number">04</span>
+                    <span class="evo-text">Déblocage de l'accès gratuit à l’académie (canal éducatif et partages).</span>
                 </li>
-                <li class="step-item">
-                    <span class="step-number">17</span>
-                    <span class="step-text">Débute ton coaching 1-1 en direct avec un expert-coach rentable.</span>
+                <li class="evolution-item">
+                    <span class="evo-number">05</span>
+                    <span class="evo-text">Immersion dans la communauté avec suivi des sessions live et prise des premières positions.</span>
                 </li>
-                <li class="step-item">
-                    <span class="step-number">18</span>
-                    <span class="step-text">Passe l’évaluation finale pour valider tes connaissances.</span>
+                <li class="evolution-item">
+                    <span class="evo-number">06</span>
+                    <span class="evo-text">Transition vers l'élite en intégrant le "Circle" privé sur demande auprès du référent.</span>
                 </li>
-                <li class="step-item">
-                    <span class="step-number">19</span>
-                    <span class="step-text">Obtiens ton Certificat de Trader SMC officiel.</span>
+                <li class="evolution-item">
+                    <span class="evo-number">07</span>
+                    <span class="evo-text">Maîtrise technique via le cursus complet 100% en ligne (SMC et fondamental).</span>
+                </li>
+                <li class="evolution-item">
+                    <span class="evo-number">08</span>
+                    <span class="evo-text">Restructuration psychologique avec le module Mindset avancé.</span>
+                </li>
+                <li class="evolution-item">
+                    <span class="evo-number">09</span>
+                    <span class="evo-text">Audit clinique et performance en coaching 1-1 avec un expert rentable.</span>
+                </li>
+                <li class="evolution-item">
+                    <span class="evo-number">10</span>
+                    <span class="evo-text">Évaluation finale pour l'obtention du Certificat de Trader SMC officiel.</span>
                 </li>
             </ul>
-
-            <div class="small-visual">
-                [ INSÉRER PETITE ILLUSTRATION ICI : Aperçu de l'espace Circle et du Certificat ]
-            </div>
 
         </main>
 
-        <!-- COLONNE LATÉRALE : ABOUT KASPER -->
         <aside class="sidebar">
-            <div class="small-visual" style="margin-top: 0;">
+            <div class="visual-placeholder" style="margin-top: 0; padding: 20px;">
                 [ INSÉRER PHOTO DE KASPER ICI ]
             </div>
             
@@ -350,3 +476,5 @@
 
 </body>
 </html>
+
+```
